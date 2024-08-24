@@ -74,7 +74,7 @@ func (t *Transform) RotateOrigin(angle float64) {
 func (t *Transform) RotatePoint(angle float64, x float64, y float64) {
 	t.Translate(x, y)
 	t.RotateOrigin(angle)
-	t.Translate(-x, -x)
+	t.Translate(-x, -y)
 }
 
 func (t *Transform) SkewX(angle float64) {
