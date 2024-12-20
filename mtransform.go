@@ -88,3 +88,9 @@ func (t *Transform) SkewY(angle float64) {
 	a[1][0] = math.Tan(angle)
 	t.MultiplyWith(a)
 }
+
+func (t *Transform) Equals(t2 *Transform) bool {
+	return t[0][0] == t2[0][0] && t[0][1] == t2[0][1] && t[0][2] == t2[0][2] &&
+		t[1][0] == t2[1][0] && t[1][1] == t2[1][1] && t[1][2] == t2[1][2] &&
+		t[2][0] == t2[2][0] && t[2][1] == t2[2][1] && t[2][2] == t2[2][2]
+}
